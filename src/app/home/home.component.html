@@ -1,0 +1,34 @@
+<div class="main-container">
+  <div class="content">
+    <h1>Hire Verified And Licensed Local Packers And Movers In TamilNadu</h1>
+    <p class="description">It is a long established fact that a render will be distracted by the readable & Save Upto
+      25%</p>
+  </div>
+</div>
+
+<div class="form-container">
+  <div class="example-container">
+    <form [formGroup]="travelForm" (ngSubmit)="submit()">
+      <mat-form-field appearance="fill">
+        <input id="pickup_search_input" matInput required formControlName="pickupLocation" type="search"
+          placeholder="Pick up location" class="pickup-input" >
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <input id="drop_search_input" matInput required formControlName="dropLocation" type="search"
+          placeholder="Enter drop location" class="drop-input">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <input id="phoneNumber" matInput required formControlName="phoneNumber" type="number"
+          placeholder="+91 Mobile number" class="number-input">
+      </mat-form-field>
+
+      <div mat-dialog-actions class="submitBtn green">
+        <button mat-stroked-button id="subBtn" type="submit">Get</button>
+        <!-- [disabled]="!travelForm.valid" -->
+    </div>
+    </form>
+  </div>
+
+</div>
