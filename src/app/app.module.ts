@@ -1,3 +1,4 @@
+import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -21,8 +22,15 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSortModule } from '@angular/material/sort';
 import { MatButtonModule } from '@angular/material/button';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatDialogModule } from '@angular/material/dialog';
+import { PortalModule } from '@angular/cdk/portal';
+import { NgOtpInputModule } from 'ng-otp-input';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { environment } from 'src/environments/environment';
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HeaderComponent,
     AlertComponent,
@@ -30,7 +38,7 @@ import { MatButtonModule } from '@angular/material/button';
     ContactComponent,
     HelpComponent,
     HomeComponent
-  ],
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -47,7 +55,15 @@ import { MatButtonModule } from '@angular/material/button';
     MatNativeDateModule,
     MatDatepickerModule,
     MatSortModule,
-    MatButtonModule
+    MatButtonModule,
+    MatAutocompleteModule,
+    MatDialogModule,
+    PortalModule,
+    NgOtpInputModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
