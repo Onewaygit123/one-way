@@ -1,0 +1,103 @@
+.main-container {
+  height: 269px;
+  // background: #CCCCCC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description {
+  text-align: center;
+}
+
+.example-container .mat-form-field+.mat-form-field {
+  margin-left: 8px;
+}
+
+.example-container .mat-form-field {
+  width: 220px;
+}
+
+.example-container form {
+  margin-bottom: 20px;
+}
+
+.example-container form>* {
+  margin: 5px 0;
+}
+
+.submitBtn {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  margin-left: 8px !important;
+  border-radius: 3px 3px 0px 0px;
+  padding: 0px;
+}
+
+#subBtn {
+  width: 220px !important;
+  padding: 13px 15px 4px 15px !important;
+  font-size: 22px;
+  color: #646161;
+}
+
+.form-container {
+  text-align: center;
+}
+
+
+.green {
+  background-color: #9ddcb9;
+}
+
+ ::ng-deep {
+  .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: #9ddcb9;
+  }
+  app-alert .verify-mobile {
+    text-align: center;
+  }
+  .verify-btn{
+    margin-left: 169px
+  }
+}
+
+
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.change-btn {
+  margin-left: 40px
+}
+
+.lbl-1 {
+  padding: 16px;
+}
+
+.lbl-2{
+  padding-left: 22px;
+  padding-bottom: 16px;
+}
+.lbl-3{
+  padding-top: 10px
+}
+
+.phone-num{
+  margin-left: 10px;
+}
+
+.resend-otp{
+  padding-left: 22px;
+}
+.material-icons{
+  vertical-align: middle;
+  padding-left: 5px;
+}
+.otp-desc{
+  text-align: center;
+}
+

@@ -1,0 +1,58 @@
+<div class="main-container">
+  <div class="content">
+    <h1>Hire Verified And Licensed Local Packers And Movers In TamilNadu</h1>
+    <p class="description">It is a long established fact that a render will be distracted by the readable & Save Upto
+      25%</p>
+  </div>
+</div>
+
+<div class="form-container">
+  <div class="example-container">
+    <form [formGroup]="travelForm" (ngSubmit)="submit()">
+      <mat-form-field appearance="fill">
+        <input id="pickup_search_input" matInput formControlName="pickupLocation" type="search"
+          placeholder="Pick up location" class="pickup-input" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <input id="drop_search_input" matInput formControlName="dropLocation" type="search"
+          placeholder="Enter drop location" class="drop-input">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <input id="phoneNumber" matInput formControlName="phoneNumber" type="number" placeholder="+91 Mobile number"
+          class="number-input">
+      </mat-form-field>
+
+      <div mat-dialog-actions class="submitBtn green">
+        <button mat-stroked-button id="subBtn" type="submit">Get</button>
+        <!-- [disabled]="!travelForm.valid" -->
+      </div>
+    </form>
+  </div>
+  <div id="sign-in-button">
+  </div>
+</div>
+
+<ng-template #yesNoDialogTemplate>
+  <div  class="flex-container">
+    <div class="lbl-1">
+      <label class="alrt-lbl">OTP has been sent to: <span class="phone-num">9965053456</span></label>
+      <button mat-stroked-button class="change-btn btn-color white" (click)="changeBtnNumber()">Change</button><br>
+    </div>
+    <div class="lbl-2">
+      <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="config"></ng-otp-input>
+    </div>
+    <div class="lbl-3">
+    <label class="resend-otp">Resend OTP<span class="material-icons">refresh</span></label>
+    <button mat-stroked-button (click)="handleClick()" class="verify-btn btn-color white">Verify</button><br>
+    </div>
+    <br>
+    <p class="otp-desc">The OTP for your enquiry expires in 45 sec</p>
+  </div>
+</ng-template>
