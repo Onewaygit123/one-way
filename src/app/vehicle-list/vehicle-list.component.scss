@@ -14,9 +14,11 @@ mat-card-content {
 }
 
 button {
-    width: 35%;
+    width: 70%;
 }
-
+.background{    
+    background-color: #f2faf5;
+}
 mat-card {
     background-color: #f2faf5;
     box-shadow: none !important;
@@ -46,7 +48,7 @@ th.mat-header-cell {
     padding: 10px 93px 20px 68px;
 }
 
-.lbl-header{
+.lbl-header {
     font-size: 18px;
     font-weight: 500;
     color: #46af74;
@@ -54,4 +56,12 @@ th.mat-header-cell {
 
 th.mat-sort-header-sorted {
     color: black;
-  }
+}
+
+tr.mat-row {
+    height: 80px;
+}
+
+td button{
+    width: 70%;
+}

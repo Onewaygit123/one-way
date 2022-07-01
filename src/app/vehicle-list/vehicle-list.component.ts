@@ -49,4 +49,8 @@ export class VehicleListComponent implements OnInit {
       resolve(['driverName', 'vehicleType', 'capacity', 'size', 'cost', 'mobileNum']);
     })
   }
+
+  getDriverDetail(data:any){
+    console.log('selected data=========',data)
+  }
 }
