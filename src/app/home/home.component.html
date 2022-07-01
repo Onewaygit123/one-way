@@ -25,8 +25,9 @@
       </mat-form-field>
 
       <mat-form-field appearance="fill">
-        <input id="phoneNumber" matInput formControlName="phoneNumber" type="number" placeholder="+91 Mobile number"
-          class="number-input">
+        <span matPrefix>+91 &nbsp;</span>
+        <input id="phoneNumber" matInput formControlName="phoneNumber" type="tel" placeholder="Mobile number"
+          class="number-input" maxlength="10" >
       </mat-form-field>
 
       <div mat-dialog-actions class="submitBtn green">
@@ -42,17 +43,19 @@
 <ng-template #yesNoDialogTemplate>
   <div  class="flex-container">
     <div class="lbl-1">
-      <label class="alrt-lbl">OTP has been sent to: <span class="phone-num">9965053456</span></label>
-      <button mat-stroked-button class="change-btn btn-color white" (click)="changeBtnNumber()">Change</button><br>
+      <label class="alrt-lbl">OTP has been sent to: <span class="phone-num">{{phoneNum}}</span></label>
     </div>
     <div class="lbl-2">
       <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="config"></ng-otp-input>
     </div>
     <div class="lbl-3">
-    <label class="resend-otp">Resend OTP<span class="material-icons">refresh</span></label>
+    <label class="resend-otp">Resend OTP<span class="material-icons" (click)="resendOtp()">refresh</span></label>
     <button mat-stroked-button (click)="handleClick()" class="verify-btn btn-color white">Verify</button><br>
     </div>
     <br>
     <p class="otp-desc">The OTP for your enquiry expires in 45 sec</p>
+    <ng-container *ngIf="showErr">      
+    <p class="otp-desc red">Please enter valid OTP</p>
+    </ng-container>
   </div>
 </ng-template>

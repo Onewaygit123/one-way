@@ -1,0 +1,82 @@
+[
+    {
+      "driverName": "Sai",
+      "vehicleType": "Tata Ace",      
+      "capacity": "750 KG",
+      "size": "7ft * 4.5ft * 5.5ft",
+      "cost": " Rs. 2000",
+      "mobileNum":"+91 9965052345"
+    },
+    {
+      "driverName": "Arun",
+      "vehicleType": "Tata Ace1",      
+      "capacity": "7501 KG",
+      "size": "7ft * 4.51ft * 5.5ft",
+      "cost": " Rs. 20001",
+      "mobileNum":"+91 99650523451"
+    },
+    {
+      "driverName": "Aravind",
+      "vehicleType": "Tata Ace",      
+      "capacity": "750 KG",
+      "size": "7ft * 4.5ft * 5.5ft",
+      "cost": " Rs. 2000",
+      "mobileNum":"+91 9965052345"
+    },
+    {
+      "driverName": "Suresh",
+      "vehicleType": "Tata Ace1",      
+      "capacity": "7501 KG",
+      "size": "7ft * 4.51ft * 5.5ft",
+      "cost": " Rs. 20001",
+      "mobileNum":"+91 99650523451"
+    },
+    {
+      "driverName": "Gokul",
+      "vehicleType": "Tata Ace1",      
+      "capacity": "7501 KG",
+      "size": "7ft * 4.51ft * 5.5ft",
+      "cost": " Rs. 20001",
+      "mobileNum":"+91 99650523451"
+    },
+    {
+      "driverName": "Santhosh",
+      "vehicleType": "Tata Ace",      
+      "capacity": "750 KG",
+      "size": "7ft * 4.5ft * 5.5ft",
+      "cost": " Rs. 2000",
+      "mobileNum":"+91 9965052345"
+    },
+    {
+      "driverName": "Praga",
+      "vehicleType": "Tata Ace1",      
+      "capacity": "7501 KG",
+      "size": "7ft * 4.51ft * 5.5ft",
+      "cost": " Rs. 20001",
+      "mobileNum":"+91 99650523451"
+    },
+    {
+      "driverName": "Kishore",
+      "vehicleType": "Tata Ace",      
+      "capacity": "750 KG",
+      "size": "7ft * 4.5ft * 5.5ft",
+      "cost": " Rs. 2000",
+      "mobileNum":"+91 9965052345"
+    },
+    {
+      "driverName": "Jaya",
+      "vehicleType": "Tata Ace1",      
+      "capacity": "7501 KG",
+      "size": "7ft * 4.51ft * 5.5ft",
+      "cost": " Rs. 20001",
+      "mobileNum":"+91 99650523451"
+    },
+    {
+      "driverName": "Udhaya",
+      "vehicleType": "Tata Ace1",      
+      "capacity": "7501 KG",
+      "size": "7ft * 4.51ft * 5.5ft",
+      "cost": " Rs. 20001",
+      "mobileNum":"+91 99650523451"
+    }
+  ]

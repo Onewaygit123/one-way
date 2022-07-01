@@ -11,7 +11,8 @@ export const environment = {
     storageBucket: "phone-auth-d8c7c.appspot.com",
     messagingSenderId: "182198145214",
     appId: "1:182198145214:web:a7613d6b3f6c134d720eef"
-  }
+  },
+  baseURL:'assets/',
 };
 
 /*
