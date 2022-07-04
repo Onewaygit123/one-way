@@ -1,0 +1,21 @@
+<hr>
+<form [formGroup]="trackForm" (ngSubmit)="submit()">
+  <mat-grid-list cols="6" rowHeight="80px">
+    <mat-grid-tile rowspan="1" colspan="6">
+      <mat-form-field appearance="outline">
+        <mat-label>Order ID</mat-label>
+        <input matInput placeholder="Order ID" formControlName="order">
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile rowspan="2" colspan="6">
+      <mat-form-field appearance="outline">
+        <mat-label>Mobile Number</mat-label>
+        <input matInput placeholder="Mobile Number" formControlName="number">
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile rowspan="3" colspan="6" id="trackId">
+      <button mat-stroked-button  type="submit" class="btn-color white">Track</button>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+</form>

@@ -36,9 +36,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule}from '@angular/material/progress-spinner';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { TrackOrderComponent } from './track-order/track-order.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
     HeaderComponent,
     AlertComponent,
@@ -47,7 +48,8 @@ import { CreateAccountComponent } from './create-account/create-account.componen
     HelpComponent,
     HomeComponent,
     VehicleListComponent,
-      CreateAccountComponent
+      CreateAccountComponent,
+      TrackOrderComponent
    ],
   imports: [
     BrowserModule,

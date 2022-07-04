@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
+import { AlertComponent } from '../utility/alert/alert.component';
 
 @Component({
   selector: 'app-create-account',
@@ -8,7 +10,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class CreateAccountComponent implements OnInit {
   contactForm: FormGroup;
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<AlertComponent>) { }
 
   ngOnInit() {
     this.contactForm = new FormGroup({
@@ -19,8 +21,9 @@ export class CreateAccountComponent implements OnInit {
     });
   }
 
-  submit(data: any) {
-    console.log(data)
+  submit() {
+    console.log('this.contactForm======',this.contactForm.value)
+    this.dialogRef.close(true);
   }
 
 }

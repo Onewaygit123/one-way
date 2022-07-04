@@ -4,19 +4,15 @@
     }
 
     .mat-form-field {
-        width: 94%;
+        width: 100%;
     }
 
     .mat-grid-tile {
         height: calc(60px) !important;
     }
 
-    #subBtn1 .mat-grid-tile-content {
-        width: 100%;
-    }
-
     .mat-grid-tile button {
-        width: 83%;
+        width: 100%;
     }
 
     .mat-grid-tile-content {
@@ -36,8 +32,7 @@
     }
 }
 
-.submitBtn {}
 
-#subBtn1 {
-    top: calc(200px) !important;
+#trackId {
+    top: calc(180px) !important;
 }
