@@ -1,7 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { CreateAccountComponent } from '../create-account/create-account.component';
+import { AlertComponent } from '../utility/alert/alert.component';
 import { VehicleList } from './vehicle-list';
 import { VehicleService } from './vehicle.service';
 
@@ -22,7 +25,7 @@ export class VehicleListComponent implements OnInit {
   columns: string[] = [];
   headerText: string;
 
-  constructor(private studentApiService: VehicleService) {
+  constructor(private studentApiService: VehicleService, public dialog: MatDialog,) {
   }
 
   ngOnInit() {
@@ -50,7 +53,28 @@ export class VehicleListComponent implements OnInit {
     })
   }
 
-  getDriverDetail(data:any){
-    console.log('selected data=========',data)
+  getDriverDetail(data: any) {
+    console.log('selected data=========', data)
+
+    if (data) {
+      let dialogRef = this.dialog.open(AlertComponent, {
+        width: '43vw',
+        maxWidth: '100vw',
+        data: {
+          component: CreateAccountComponent,
+          title: 'Create Account',
+          hr:true
+        }
+      });
+
+      // dialogRef.afterClosed().subscribe((result) => {
+      //   if (result == 'close'){
+
+      //     return;
+      //   } 
+      //   // delete it
+      // });
+    }
+
   }
 }

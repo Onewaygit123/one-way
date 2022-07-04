@@ -16,18 +16,19 @@ export interface IDynamicDialogConfig {
 
 export class AlertComponent implements OnInit, AfterViewInit {
   class: any;
+  portal: ComponentPortal<any>;
   constructor(public dialogRef: MatDialogRef<AlertComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: IDynamicDialogConfig) {
+    @Inject(MAT_DIALOG_DATA) public data: any) {
     data.acceptButtonTitle ?? 'Yes';
     data.title ?? 'Unnamed Dialog';
     this.class = data.class
   }
 
   ngAfterViewInit() {
-
   }
 
   ngOnInit() {
+    this.portal = new ComponentPortal(this.data.component);
 
   }
   close() {

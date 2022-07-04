@@ -35,9 +35,10 @@ import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule}from '@angular/material/progress-spinner';
+import { CreateAccountComponent } from './create-account/create-account.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HeaderComponent,
     AlertComponent,
@@ -45,8 +46,9 @@ import { MatProgressSpinnerModule}from '@angular/material/progress-spinner';
     ContactComponent,
     HelpComponent,
     HomeComponent,
-    VehicleListComponent
-  ],
+    VehicleListComponent,
+      CreateAccountComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
