@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnChanges {
       phoneNumber: new FormControl('',)// [Validators.required]
     });
     firebase.initializeApp(config)
-    this.verify = JSON.parse(localStorage.getItem('verificationId') || '{}');
+  
   }
 
   ngAfterViewInit() {
@@ -115,6 +115,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnChanges {
     firebase.auth().signInWithPhoneNumber(phoneNumber, this.reCaptchaVerifier).then((confirmationResult) => {
       console.log('confirmation result=======', confirmationResult)
       localStorage.setItem('verificationId', JSON.stringify(confirmationResult.verificationId))   
+      this.verify = confirmationResult.verificationId;
     }).catch((error) => {
       console.log('error=======', error)
       this.reCaptchaVerifier.clear()
@@ -124,6 +125,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnChanges {
 
   handleClick() {
     let credentials = firebase.auth.PhoneAuthProvider.credential(this.verify, this.otp);
+    console.log("firebase --> " + firebase)
     firebase.auth().signInWithCredential(credentials).then((response) => {
       console.log('success case=====', response)
       console.log('success case=====', response.operationType)

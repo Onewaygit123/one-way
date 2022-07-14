@@ -28,7 +28,10 @@ export class AlertComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    this.portal = new ComponentPortal(this.data.component);
+    if(this.data?.component){
+      this.portal = new ComponentPortal(this.data?.component);
+    }
+    
 
   }
   close() {
