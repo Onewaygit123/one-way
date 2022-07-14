@@ -14,8 +14,8 @@ import { HelpComponent } from './help/help.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
-import {MatInputModule} from '@angular/material/input';
-import {MatTableModule} from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -29,15 +29,27 @@ import { NgOtpInputModule } from 'ng-otp-input';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environment';
+import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressSpinnerModule}from '@angular/material/progress-spinner';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { TrackOrderComponent } from './track-order/track-order.component';
+
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
     HeaderComponent,
     AlertComponent,
     AboutUsComponent,
     ContactComponent,
     HelpComponent,
-    HomeComponent
+    HomeComponent,
+    VehicleListComponent,
+      CreateAccountComponent,
+      TrackOrderComponent
    ],
   imports: [
     BrowserModule,
@@ -63,7 +75,15 @@ import { environment } from 'src/environments/environment';
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    
+    MatGridListModule,
+    MatCardModule,
+    HttpClientModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

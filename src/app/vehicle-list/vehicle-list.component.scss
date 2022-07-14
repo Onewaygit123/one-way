@@ -1,0 +1,71 @@
+mat-card-title {
+    font-size: small;
+    color: #a9a2a2;
+}
+
+mat-card-content {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.arrow-icon {
+    text-align: center;
+    margin-bottom: 0px !important;
+}
+
+button {
+    width: 70%;
+}
+.background{    
+    background-color: #f2faf5;
+}
+mat-card {
+    background-color: #f2faf5;
+    box-shadow: none !important;
+}
+
+.icon {
+    font-weight: 900;
+}
+
+table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 500px;
+}
+
+th.mat-header-cell {
+    text-align: left;
+    max-width: 300px;
+}
+
+.data-table {
+    padding: 0px 93px 0px 68px;
+}
+
+.table-header {
+    padding: 10px 93px 20px 68px;
+}
+
+.lbl-header {
+    font-size: 18px;
+    font-weight: 500;
+    color: #46af74;
+}
+
+th.mat-sort-header-sorted {
+    color: black;
+}
+
+tr.mat-row {
+    height: 80px;
+}
+
+td button{
+    width: 70%;
+}
+.truck-icon{
+    height: 30px;
+    width: 30px;
+}

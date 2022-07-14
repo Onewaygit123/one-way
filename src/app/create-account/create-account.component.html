@@ -1,0 +1,51 @@
+<hr>
+<form [formGroup]="contactForm" (ngSubmit)="submit()">
+  <mat-grid-list cols="6" rowHeight="80px">
+    <mat-grid-tile rowspan="1" colspan="3">
+      <mat-form-field appearance="outline">
+        <mat-label>Full Name</mat-label>
+        <input matInput placeholder="Name" formControlName="name">
+        <mat-icon matSuffix>check</mat-icon>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile rowspan="1" colspan="3">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email">
+        <mat-icon matSuffix>check</mat-icon>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile rowspan="2" colspan="3">
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" type="password" formControlName="pass">
+        <mat-icon matSuffix>check</mat-icon>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile rowspan="2" colspan="3">
+      <mat-form-field appearance="outline">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput placeholder="Confirm Password" formControlName="confirmPass">
+        <mat-icon matSuffix>check</mat-icon>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspan="3" colspan="3" id="subBtn1">
+      <!-- <button mat-stroked-button id="subBtn" type="submit">Get</button> -->
+    </mat-grid-tile>
+    <mat-grid-tile rowspan="3" colspan="1" id="subBtn1">
+      <!-- <button mat-stroked-button  type="submit" class="btn-color white">Next</button> -->
+    </mat-grid-tile>
+    <mat-grid-tile rowspan="3" colspan="1" id="subBtn1">
+      <!-- <button mat-stroked-button  type="submit" class="btn-color white">Next</button> -->
+    </mat-grid-tile>
+    <mat-grid-tile rowspan="3" colspan="1" id="subBtn1">
+      <button mat-stroked-button  type="submit" class="btn-color white">Next</button>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+  <!-- <div>
+    <button mat-stroked-button id="subBtn" type="submit">Get</button> -->
+  <!-- [disabled]="!travelForm.valid" -->
+  <!-- </div> -->
+</form>

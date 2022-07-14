@@ -1,12 +1,12 @@
 import { ComponentPortal } from '@angular/cdk/portal';
-import { AfterViewInit, Component, Inject, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Inject, OnInit, Output, TemplateRef, ViewChild } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 export interface IDynamicDialogConfig {
   title?: string;
   acceptButtonTitle?: string;
   declineButtonTitle?: string;
   dialogContent: TemplateRef<any>;
-  class?:string;
+  class?: string;
 }
 @Component({
   selector: 'app-alert',
@@ -14,20 +14,28 @@ export interface IDynamicDialogConfig {
   styleUrls: ['./alert.component.scss']
 })
 
-export class AlertComponent implements OnInit,AfterViewInit {
- 
+export class AlertComponent implements OnInit, AfterViewInit {
+  class: any;
+  portal: ComponentPortal<any>;
   constructor(public dialogRef: MatDialogRef<AlertComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: IDynamicDialogConfig) {
-      data.acceptButtonTitle ?? 'Yes';
-      data.title ?? 'Unnamed Dialog';
-     }
+    @Inject(MAT_DIALOG_DATA) public data: any) {
+    data.acceptButtonTitle ?? 'Yes';
+    data.title ?? 'Unnamed Dialog';
+    this.class = data.class
+  }
 
   ngAfterViewInit() {
-   
   }
 
   ngOnInit() {
+    if(this.data?.component){
+      this.portal = new ComponentPortal(this.data?.component);
+    }
+    
 
   }
-  
+  close() {
+    this.dialogRef.close({ data: 'close' })
+  }
+
 }

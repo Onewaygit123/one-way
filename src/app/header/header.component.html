@@ -1,27 +1,23 @@
-  <!-- <div class="flex-container">
-    <div>1</div>
-    <div>2</div> 
+<mat-toolbar class="toolbar">
+  <!-- <a mat-button class="companyName" routerLink="/"> -->
+  <h1>ONEWAY</h1>
+  <!-- </a> -->
+  <a mat-button routerLink="/home">Home</a>
+  <a mat-button routerLink="/about">About Us</a>
+  <a mat-button routerLink="/contact">Contact Us</a>
+  <a mat-button routerLink="/help">Help & Support</a>
+
+  <span class="example-spacer"></span>
+  <div>
+    <a mat-button (click)="openTrackOrder()">
+      <span><img class="img" [src]="trackOrder" /></span>
+      Track Order
+    </a>
+    <a mat-button>
+      <span><img class="img" [src]="signInImg" /></span>
+      Sign In
+    </a>
   </div>
-  
-  <div class="flex-container1">
-    <div>5</div>
-    <div>6</div>  
-  </div> -->
 
-  <mat-toolbar class="toolbar">
-    <!-- <a mat-button class="companyName" routerLink="/"> -->
-      <h1>ONEWAY</h1>
-    <!-- </a> -->
-      <a mat-button routerLink="/home">Home</a>
-      <a mat-button routerLink="/about">About Us</a>
-      <a mat-button routerLink="/contact">Contact Us</a>
-      <a mat-button routerLink="/help">Help & Support</a>
-    
-    <span class="example-spacer"></span>
-    <div>
-      <a mat-button>Track Order</a>
-      <a mat-button>Sign In</a>
-    </div>
-
-  </mat-toolbar>
+</mat-toolbar>
 <!-- </div> -->

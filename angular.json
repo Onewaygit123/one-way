@@ -71,6 +71,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "proxy-local.config.js",
+            "browserTarget": "moonbike-ui:build"
+          },
           "configurations": {
             "production": {
               "browserTarget": "oneWay:build:production"

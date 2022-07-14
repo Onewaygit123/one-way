@@ -1,0 +1,38 @@
+:host ::ng-deep {
+    mat-grid-list {
+        height: calc(272px) !important;
+    }
+
+    .mat-form-field {
+        width: 100%;
+    }
+
+    .mat-grid-tile {
+        height: calc(60px) !important;
+    }
+
+    .mat-grid-tile button {
+        width: 100%;
+    }
+
+    .mat-grid-tile-content {
+        display: block;
+    }
+
+    .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+        color: #9ddcb9
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+        color: #9ddcb9
+    }
+
+    .mat-form-field-appearance-outline.mat-focused .mat-form-field-label {
+        color: black;
+    }
+}
+
+
+#trackId {
+    top: calc(180px) !important;
+}

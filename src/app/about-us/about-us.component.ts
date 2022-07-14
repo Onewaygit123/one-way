@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-about-us',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private afAuth: AngularFireAuth) { }
 
   ngOnInit() {
+   this.logout();
+  }
+
+  logout() {
+    return this.afAuth.signOut().then((data) => {
+      console.log('data============', data)
+    })
   }
 
 }

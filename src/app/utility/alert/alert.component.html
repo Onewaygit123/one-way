@@ -1,12 +1,22 @@
-<h2 mat-dialog-title [class]="data.class">{{ data.title }}</h2>
+<div class="header">
+  <h2 mat-dialog-title [class]="class ">{{ data.title }}</h2>
+  <mat-icon class="cls-icon" (click)="close()">close</mat-icon>
+</div>
 <mat-dialog-content>
-  <ng-container [ngTemplateOutlet]="data.dialogContent"> </ng-container>
+
+  <ng-container *ngIf="data.dialogContent"  [ngTemplateOutlet]="data.dialogContent"> </ng-container>
+
+  <ng-container *ngIf="portal">
+    <ng-template [cdkPortalOutlet]="portal"></ng-template>
+  </ng-container>
 </mat-dialog-content>
+<ng-container *ngIf="data.declineButtonTitle || data.acceptButtonTitle">
 <mat-dialog-actions>
   <button *ngIf="data.declineButtonTitle" mat-button mat-dialog-close>
     {{ data.declineButtonTitle }}
   </button>
-  <button  *ngIf="data.declineButtonTitle" mat-button [mat-dialog-close]="true" cdkFocusInitial>
+  <button *ngIf="data.acceptButtonTitle" mat-button [mat-dialog-close]="true" cdkFocusInitial>
     {{ data.acceptButtonTitle }}
   </button>
 </mat-dialog-actions>
+</ng-container>
