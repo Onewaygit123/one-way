@@ -10,6 +10,9 @@ import { AlertComponent } from '../utility/alert/alert.component';
 })
 export class HeaderComponent implements OnInit {
 
+  signInImg = "../../assets/images/Sign_in.png";
+  trackOrder = "../../assets/images/Track_icon.png";
+
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {

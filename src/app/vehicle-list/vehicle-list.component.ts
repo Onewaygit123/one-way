@@ -24,7 +24,8 @@ export class VehicleListComponent implements OnInit {
   displayedColumns: string[] = ['modification',];
   columns: string[] = [];
   headerText: string;
-
+  pickUpTruck = "../../assets/images/Pickup_location_icon.png";
+  dropTruck = "../../assets/images/Drop_location_icon.png";
   constructor(private studentApiService: VehicleService, public dialog: MatDialog,) {
   }
 

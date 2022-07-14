@@ -1,18 +1,23 @@
+<mat-toolbar class="toolbar">
+  <!-- <a mat-button class="companyName" routerLink="/"> -->
+  <h1>ONEWAY</h1>
+  <!-- </a> -->
+  <a mat-button routerLink="/home">Home</a>
+  <a mat-button routerLink="/about">About Us</a>
+  <a mat-button routerLink="/contact">Contact Us</a>
+  <a mat-button routerLink="/help">Help & Support</a>
 
-  <mat-toolbar class="toolbar">
-    <!-- <a mat-button class="companyName" routerLink="/"> -->
-      <h1>ONEWAY</h1>
-    <!-- </a> -->
-      <a mat-button routerLink="/home">Home</a>
-      <a mat-button routerLink="/about">About Us</a>
-      <a mat-button routerLink="/contact">Contact Us</a>
-      <a mat-button routerLink="/help">Help & Support</a>
-    
-    <span class="example-spacer"></span>
-    <div>
-      <a mat-button (click)="openTrackOrder()">Track Order</a>
-      <a mat-button>Sign In</a>
-    </div>
+  <span class="example-spacer"></span>
+  <div>
+    <a mat-button (click)="openTrackOrder()">
+      <span><img class="img" [src]="trackOrder" /></span>
+      Track Order
+    </a>
+    <a mat-button>
+      <span><img class="img" [src]="signInImg" /></span>
+      Sign In
+    </a>
+  </div>
 
-  </mat-toolbar>
+</mat-toolbar>
 <!-- </div> -->

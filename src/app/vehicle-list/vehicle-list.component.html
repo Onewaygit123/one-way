@@ -1,6 +1,6 @@
 <mat-grid-list cols="10" rowHeight="100px">
   <mat-grid-tile rowspan="1" colspan="3">
-    <span class="material-icons">fire_truck</span>
+    <span><img class="truck-icon" [src]="pickUpTruck" /></span>
     <mat-card class="my-card">
       <mat-card-title>Pickup location</mat-card-title>
       <mat-card-content>
@@ -16,7 +16,7 @@
     </mat-card>
   </mat-grid-tile>
   <mat-grid-tile rowspan="1" colspan="3">
-    <span class="material-icons">fire_truck</span>
+    <span><img class="truck-icon" [src]="dropTruck" /></span>
     <mat-card class="my-card">
       <mat-card-title>Drop location</mat-card-title>
       <mat-card-content>
